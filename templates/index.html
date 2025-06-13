@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADAI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='ind.css') }}">
+  <title>ML Anomaly Detection</title>
+</head>
+<body>
+    <section id="result" class="whole">
+        <div class="container">
+          <h2>ANOMALY DETECTION</h2>
+          <br>
+          <br>
+          <form action="/" method="POST"  id="predictionForm">
+            
+              <label for="feature1">Bwd Pkt Len Std:</label>
+              <input type="text" id="feature1" name="Bwd_Pkt_Len_Std" placeholder="Bwd_Pkt_Len_Std" required>
+  
+              <label for="feature2"> PSH Flag Cnt:</label>
+              <input type="text" id="feature2" name="PSH_Flag_Cnt" placeholder="PSH_Flag_Cnt " required>
+  
+              <label for="feature2">Fwd Seg Size Min:</label>
+              <input type="text" id="feature2" name="Fwd_Seg_Size_Min" placeholder="Fwd_Seg_Size_Min" required>
+  
+              <label for="feature2">Bwd Pkt Len Min:</label>
+              <input type="text" id="feature2" name="Bwd_Pkt_Len_Min" placeholder="Bwd_Pkt_Len_Min " required>
+  
+              <label for="feature2">ACK Flag Cnt:</label>
+              <input type="text" id="feature2" name="ACK_Flag_Cnt" placeholder="ACK_Flag_Cnt " required>
+  
+              <label for="feature2">Fwd IAT Std:</label>
+              <input type="text" id="feature2" name="Fwd_IAT_Std" placeholder="Fwd_IAT_Std " required>
+  
+              <label for="feature2">Init Fwd Win Byts:</label>
+              <input type="text" id="feature2" name="Init_Fwd_Win_Byts" placeholder="Init_Fwd_Win_Byts" required>
+  
+              <label for="feature2">Flow IAT Max:</label>
+              <input type="text" id="feature2" name="Flow_IAT_Max" placeholder="Flow_IAT_Max" required>
+  
+              <label for="feature2">Bwd Pkts/s:</label>
+              <input type="text" id="feature2" name="Bwd_Pkts/s" placeholder="Bwd_Pkts/s" required>
+  
+              <label for="feature2">Bwd IAT Tot:</label>
+              <input type="text" id="feature2" name="Bwd_IAT_Tot" placeholder="Bwd_IAT_Tot" required>
+  
+              <label for="feature2">URG Flag Cnt:</label>
+              <input type="text" id="feature2" name="URG_Flag_Cnt" placeholder="URG_Flag_Cnt" required>
+              
+              <label for="feature2">Pkt Len Min:</label>
+              <input type="text" id="feature2" name="Pkt_Len_Min" placeholder="Pkt_Len_Min" required>
+              <!-- Class: {{result}} <br> -->
+              <!-- <button type="button" onclick="predict()">Predict</button> -->
+              <!-- <input type='submit' value="Predict">
+              <br> -->
+              <button type="submit">Predict</button>
+          </form>
+          <!-- <div id="predictionResult"></div> -->
+
+          <div class="result1">
+            <br>
+            <br>
+            {% if prediction %}
+                <p> {{ prediction }}</p>
+            {% endif %}
+        </div>
+      </div> 
+  </section>
+</body>
