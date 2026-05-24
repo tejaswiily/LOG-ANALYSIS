@@ -22,7 +22,7 @@ We used the **CICIDS2017** dataset, a comprehensive intrusion detection dataset 
 
 ## 🧠 Machine Learning Models and Results
 
-We trained and evaluated multiple machine learning models. Below is a performance comparison:
+We trained and evaluated multiple machine learning models. Below is a comparison of the performance:
 
 | Model                | Precision | Recall   | F1 Score |
 |---------------------|-----------|----------|----------|
